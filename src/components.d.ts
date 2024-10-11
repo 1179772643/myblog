@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Body: typeof import('./components/Body.vue')['default']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     Home: typeof import('./components/Home.vue')['default']
     PullOut: typeof import('./components/PullOutbar.vue')['default']
     PullOutbar: typeof import('./components/PullOutbar.vue')['default']
