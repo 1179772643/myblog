@@ -9,10 +9,16 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
+      path: '/',
+      redirect: '/home',
+    },
+    {
+      name: 'zhuye',
       path: '/home',
       component: Home,
     },
     {
+      name: 'daima',
       path: '/code',
       component: Code,
     },
