@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import CodePullOutbar from '@/components/CodePullOutbar.vue'
 </script>
 
 <template>
-  <CodePullOutbar />
   <div class=" absolute flex justify-center items-center h-screen w-screen z-0">
-    <RouterView />
+    这里是关于页面
   </div>
 </template>

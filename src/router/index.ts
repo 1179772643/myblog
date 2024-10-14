@@ -16,11 +16,44 @@ const router = createRouter({
       name: 'zhuye',
       path: '/home',
       component: Home,
+      children: [{
+        path: '',
+        redirect: '/personal',
+      }, {
+        name: 'Personal',
+        path: '/personal',
+        component: () => import('@/page/Personal.vue'),
+      }, {
+        name: 'Collection',
+        path: '/collection',
+        component: () => import('@/page/MyCollection.vue'),
+      }, {
+        name: 'Achievement',
+        path: '/achievement',
+        component: () => import('@/page/MyAchievement.vue'),
+      }],
     },
     {
       name: 'daima',
       path: '/code',
       component: Code,
+      children: [{
+        path: '',
+        redirect: '/mycode',
+      }, {
+        name: 'mycode',
+        path: '/mycode',
+        component: () => import('@/page/MyCode.vue'),
+      }, {
+        name: 'wodexiaowanju',
+        path: '/mylittletoy',
+        component: () => import('@/page/MyLittleToy.vue'),
+      }],
+    },
+    {
+      name: 'about',
+      path: '/about',
+      component: () => import('@/page/About.vue'),
     },
   ],
 })
