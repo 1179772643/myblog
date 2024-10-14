@@ -1,5 +1,58 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+
+const isDark = useDark({
+  selector: 'html',
+  valueDark: 'dark',
+})
+
+// 黑夜白天模式
+function toggleDark(event: MouseEvent) {
+  // @ts-expect-error experimental API
+  const isAppearanceTransition = document.startViewTransition
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (!isAppearanceTransition) {
+    isDark.value = !isDark.value
+    return
+  }
+
+  // 处理鼠标点击位置到边缘的最大距离,这个距离将作为涟漪效果的结束半径。
+  const x = event.clientX
+  const y = event.clientY
+  const endRadius = Math.hypot(
+    Math.max(x, innerWidth - x),
+    Math.max(y, innerHeight - y),
+  )
+
+  // 作为视图转换(主题切换的函数和方法)
+  // @ts-expect-error: Transition API
+  const transition = document.startViewTransition(async () => {
+    isDark.value = !isDark.value
+    await nextTick()
+  })
+  transition.ready
+    .then(() => {
+      const clipPath = [
+        `circle(0px at ${x}px ${y}px)`,
+        `circle(${endRadius}px at ${x}px ${y}px)`,
+      ]
+      document.documentElement.animate(
+        {
+          clipPath: isDark.value
+            ? [...clipPath].reverse()
+            : clipPath,
+        },
+        {
+          duration: 400,
+          easing: 'ease-out',
+          pseudoElement: isDark.value
+            ? '::view-transition-old(root)'
+            : '::view-transition-new(root)',
+        },
+      )
+    })
+}
 </script>
 
 <template>
@@ -16,6 +69,10 @@ import { RouterLink } from 'vue-router'
       <svg t="1728617242942" class="icon size-[30px] absolute top-[8px] right-[65px]" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8332" width="200" height="200"><path d="M512 1024C229.376 1024 0 794.624 0 512S229.376 0 512 0s512 229.376 512 512-229.376 512-512 512z m0-949.248C271.36 74.752 75.776 271.36 75.776 512S271.36 949.248 512 949.248 949.248 752.64 949.248 512 752.64 74.752 512 74.752z m0 753.664a45.44 45.44 0 0 1-45.056-45.056V444.416c0-25.6 20.48-45.056 45.056-45.056s45.056 19.456 45.056 45.056V783.36A45.44 45.44 0 0 1 512 828.416z m0-474.112c-24.576 0-45.056-20.48-45.056-46.08V240.64c0-24.576 20.48-45.056 45.056-45.056s45.056 20.48 45.056 45.056v67.584c0 25.6-20.48 46.08-45.056 46.08z" p-id="8333" fill="#515151"></path></svg>
       关于
     </RouterLink>
+    <a
+      class="iconify size-[32px] top-[36px] relative " :class="isDark ? 'icon-[mdi--white-balance-sunny]' : 'icon-[solar--moon-stars-linear]'"
+      @click="toggleDark"
+    />
   </div>
 </template>
 
