@@ -25,6 +25,7 @@ const itemList = ref([
   width: 300px;
   transition:
     color 0.9s ease,
+    width 0.5s ease,
     transform 0.9s ease;
 }
 </style>

@@ -4,6 +4,7 @@ import { useDark, useToggle } from '@vueuse/core'
 import { RouterLink } from 'vue-router'
 
 const isDark = useDark()
+isDark.value = false
 const toggleDark = useToggle(isDark)
 </script>
 
