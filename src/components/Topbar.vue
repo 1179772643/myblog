@@ -44,4 +44,8 @@ const toggleDark = useToggle(isDark)
     transform 0.3s ease,
     color 0.3s ease;
 }
+.dark .open {
+  color: aliceblue;
+  background: #191919;
+}
 </style>

@@ -11,7 +11,6 @@ import HomePullOutbar from '@/components/HomePullOutbar.vue'
 
 <style scoped>
  .dark .home {
-  --c-bg: #000;
   color: aliceblue;
 }
 </style>
