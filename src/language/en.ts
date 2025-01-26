@@ -8,6 +8,9 @@ const en = {
     information: {
       title: 'Welcome to My Blog',
       description: 'I am a front-end engineer and I like to share my knowledge and experience',
+      name: 'Xiao Fan',
+      front: 'I am interested in front-end and I can use some front-end technologies and some frameworks',
+      skill: 'Familiar and good at',
     },
     myAchievement: {
       title: 'My Achievements',

@@ -15,6 +15,7 @@
   "dependencies": {
     "@iconify/json": "^2.2.245",
     "@vueuse/core": "^11.0.3",
+    "animate.css": "^4.1.1",
     "element-plus": "^2.8.2",
     "vue": "^3.5.3",
     "vue-i18n": "^11.0.1",
@@ -37,6 +38,7 @@
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4",
     "unplugin-auto-import": "^0.18.2",
+    "unplugin-icons": "^22.0.0",
     "unplugin-vue-components": "^0.27.4",
     "vite": "^5.4.3",
     "vite-plugin-vue-devtools": "^7.4.4",

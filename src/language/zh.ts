@@ -8,6 +8,9 @@ const zh = {
     information: {
       title: '欢迎来到我的博客',
       description: '我是一个前端工程师，我喜欢分享我的知识和经验',
+      name: '肖帆',
+      front: '我对前端非常感兴趣，能够掌握以下一些前端技术的使用以及一些框架的使用',
+      skill: '熟悉掌握和擅长',
     },
     myAchievement: {
       title: '我的成就',
