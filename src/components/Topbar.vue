@@ -21,7 +21,7 @@ function changeLanguage() {
 </script>
 
 <template>
-  <div class="flex justify-center gap-20  h-[100px] shadow-md w-full fixed z-20 bg-slate-300 open" hover-class="none" hover-stop-propagation="false">
+  <div class="flex justify-center gap-20  h-[100px] shadow-md w-full fixed z-20 bg-slate-300 open opacity-50" hover-class="none" hover-stop-propagation="false">
     <RouterLink id="my-div" to="/home" class="text-[30px] relative justify-center top-[30px] flex " selectable="false" space="false" decode="false">
       {{ $t('topBar.home') }}
     </RouterLink>

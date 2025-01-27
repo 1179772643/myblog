@@ -7,6 +7,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ArtBall: typeof import('./components/ArtBall.vue')['default']
+    ArtPlum: typeof import('./components/ArtPlum.vue')['default']
+    ArtStar: typeof import('./components/ArtStar.vue')['default']
+    BackgroundStar: typeof import('./components/BackgroundStar.vue')['default']
     Body: typeof import('./components/Body.vue')['default']
     CodePullOutbar: typeof import('./components/CodePullOutbar.vue')['default']
     ElIcon: typeof import('element-plus/es')['ElIcon']
