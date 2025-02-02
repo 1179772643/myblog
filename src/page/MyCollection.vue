@@ -12,6 +12,7 @@ const connection = ref([
 // 从localStorage中读取保存的状态即重新调用该状态
 const savedState = localStorage.getItem('draggableState')
 if (savedState) {
+  // JSON.parse() 方法用于将一个 JSON 字符串转换为 JavaScript 对象
   connection.value = JSON.parse(savedState)
 }
 
@@ -22,23 +23,26 @@ function saveState() {
 </script>
 
 <template>
-  <div class="flex absolute top-[140px] text-[38px] animate__animated animate__fadeIn">
-    {{ $t('home.myCollection.description') }}
-  </div>
-  <div
-    v-draggable="[
-      connection,
-      {
-        animation: 150,
-        onEnd: saveState,
-      },
-    ]" class=" relative top-[-80px] w-[87%] flex shadow-inner bg-inherit flex-wrap">
-    <a v-for="(item, index) in connection" :key="index" :href="item.url" target="_blank" class=" flex-wrap relative h-[190px] m-[20px] w-[150px] flex justify-center items-center rounded-[30px] box-shadow-custom container">
-      <img class="size-25 top-[10px] absolute" :src="item.img">
-      <text class="text-[30px] relative top-[70px]">
-        {{ item.title }}
-      </text>
-    </a>
+  <div class="h-sreen w-sreen">
+    <div class="flex text-[38px] animate__animated animate__fadeIn">
+      {{ $t('home.myCollection.description') }}
+    </div>
+    <div
+      v-draggable="[
+        connection,
+        {
+          animation: 150,
+          onEnd: saveState,
+        },
+      ]" class=" relative  w-[87%] flex shadow-inner bg-inherit flex-wrap"
+    >
+      <a v-for="(item, index) in connection" :key="index" :href="item.url" target="_blank" class=" flex-wrap relative h-[190px] m-[20px] w-[150px] flex justify-center items-center rounded-[30px] box-shadow-custom container">
+        <img class="size-25 top-[10px] absolute" :src="item.img">
+        <text class="text-[30px] relative top-[70px]">
+          {{ item.title }}
+        </text>
+      </a>
+    </div>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="Personal">
+  <div class="Personal h-screen w-screen">
     111
   </div>
 </template>
