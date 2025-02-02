@@ -3,11 +3,7 @@ import 'animate.css'
 </script>
 
 <template>
-  <image src="/src/assets/" class=" left-0 top-0 -z-20 size-full" />
   <div class="Personal h-screen w-screen flex flex-col justify-center items-center">
-    <div class=" absolute flex top-[230px] left-[200px] size-[150px] rounded-[50%] bg-black">
-      <img src="/src/assets/myimg.jpg" alt="" class="rounded-[50%]">
-    </div>
     <div class=" relative w-[100vh] justify-start bottom-[140px] animate__animated animate__fadeInDown">
       {{ $t('home.information.description') }}
       <div class=" text-[30px]">

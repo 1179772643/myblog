@@ -8,16 +8,18 @@ import MyCollection from './MyCollection.vue'
 
 <template>
   <HomePullOutbar />
-  <Start />
-  <section id="panel1">
-    <personnal />
-  </section>
-  <section id="panel2">
-    <MyAchievement />
-  </section>
-  <section id="panel3">
-    <MyCollection />
-  </section>
+  <div class="home">
+    <Start />
+    <section id="panel1">
+      <personnal />
+    </section>
+    <section id="panel2">
+      <MyAchievement />
+    </section>
+    <section id="panel3">
+      <MyCollection />
+    </section>
+  </div>
 </template>
 
 <style scoped>

@@ -11,6 +11,7 @@
 html {
   background: var(--c-bg);
   transition: background 0.1s linear !important;
+  scroll-behavior: smooth;
 }
 
 .box-shadow-custom {
