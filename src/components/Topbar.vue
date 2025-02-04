@@ -21,14 +21,14 @@ function changeLanguage() {
 </script>
 
 <template>
-  <div class="flex justify-center gap-20  h-[100px] shadow-md w-full fixed z-20 bg-slate-300 open opacity-50" hover-class="none" hover-stop-propagation="false">
-    <RouterLink id="my-div" to="/home" class="text-[30px] relative justify-center top-[30px] flex " selectable="false" space="false" decode="false">
+  <div class="flex justify-center gap-20  h-[100px] shadow-md w-full fixed z-20 bg-slate-200/50 open backdrop-blur-sm">
+    <RouterLink id="my-div" to="/home" class="text-[30px] relative justify-center top-[30px] flex h-[70px]" selectable="false" space="false" decode="false">
       {{ $t('topBar.home') }}
     </RouterLink>
-    <RouterLink to="/code" class="text-[30px] relative  top-[30px]" selectable="false" space="false" decode="false">
+    <RouterLink to="/code" class="text-[30px] relative  top-[30px]  h-[70px]" selectable="false" space="false" decode="false">
       {{ $t('topBar.code') }}
     </RouterLink>
-    <RouterLink to="/about" class="text-[30px] relative  top-[30px]" selectable="false" space="false" decode="false">
+    <RouterLink to="/about" class="text-[30px] relative  top-[30px]  h-[70px]" selectable="false" space="false" decode="false">
       {{ $t('topBar.about') }}
     </RouterLink>
     <a
@@ -36,11 +36,11 @@ function changeLanguage() {
       class=" text-4xl hover:text-gray-700 top-[35px] relative"
       @click="toggleDark()"
     />
-    <button class="icon-[carbon--ibm-watson-language-translator] text-[30px] mt-[38px]" @click="changeLanguage"/>
+    <button class="icon-[carbon--ibm-watson-language-translator] text-[30px] mt-[38px]" @click="changeLanguage" />
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   div > div:hover {
   transition:
     color 0.3s ease,
@@ -50,7 +50,9 @@ function changeLanguage() {
   color: grey;
   transition:
     transform 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    border-bottom 0.3s ease; /* 添加下划线的过渡效果 */
+  border-bottom: 2px solid grey;
 }
 .dark .open {
   color: aliceblue;

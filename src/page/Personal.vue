@@ -3,7 +3,7 @@ import 'animate.css'
 </script>
 
 <template>
-  <div class="Personal h-screen w-screen flex flex-col justify-center items-center">
+  <div class="Personal h-screen flex flex-col justify-center items-center">
     <div class=" relative w-[100vh] justify-start bottom-[140px] animate__animated animate__fadeInDown">
       {{ $t('home.information.description') }}
       <div class=" text-[30px]">

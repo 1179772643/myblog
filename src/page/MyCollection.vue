@@ -34,7 +34,7 @@ function saveState() {
           animation: 150,
           onEnd: saveState,
         },
-      ]" class=" relative w-screen flex shadow-inner bg-inherit flex-wrap justify-center top-[250px]"
+      ]" class=" relative flex shadow-inner bg-inherit flex-wrap justify-center top-[250px]"
     >
       <a v-for="(item, index) in connection" :key="index" :href="item.url" target="_blank" class=" flex-wrap relative h-[190px] m-[20px] w-[150px] flex justify-center items-center rounded-[30px] box-shadow-custom container">
         <img class="size-25 top-[10px] absolute" :src="item.img">
