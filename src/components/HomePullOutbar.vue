@@ -26,7 +26,7 @@ function openPullOutbar() {
       <span />
     </label>
   </div>
-  <transition name="slide-in">
+  <transition name="slide-in" class="z-30">
     <div v-if="isOpen" class=" bg-slate-200 shadow-2xl fixed h-[100vh] overflow-hidden pullOutbar opacity-70 w-[250px]">
       <section v-for="(item, index) in itemList" :key="index" class="w-[800px] h-[30px]">
         <img :src="item.icon" alt="" class=" relative size-[40px] top-[200px] mt-[100px] left-[11px] opacity-[50%] icon">

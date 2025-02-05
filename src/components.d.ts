@@ -13,6 +13,7 @@ declare module 'vue' {
     BackgroundStar: typeof import('./components/BackgroundStar.vue')['default']
     Body: typeof import('./components/Body.vue')['default']
     CodePullOutbar: typeof import('./components/CodePullOutbar.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     Home: typeof import('./components/Home.vue')['default']

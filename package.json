@@ -16,6 +16,7 @@
     "@iconify/json": "^2.2.245",
     "@vueuse/core": "^11.0.3",
     "animate.css": "^4.1.1",
+    "css-doodle": "^0.41.0",
     "element-plus": "^2.8.2",
     "vue": "^3.5.3",
     "vue-draggable-plus": "^0.6.0",

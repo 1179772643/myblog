@@ -21,7 +21,7 @@ function changeLanguage() {
 </script>
 
 <template>
-  <div class="flex justify-center gap-20  h-[100px] shadow-md w-full fixed z-20 bg-slate-200/50 open backdrop-blur-sm">
+  <div class="flex justify-center gap-20  h-[100px] shadow-md w-full fixed z-20 bg-slate-200/40 open backdrop-blur-sm">
     <RouterLink id="my-div" to="/home" class="text-[30px] relative justify-center top-[30px] flex h-[70px]" selectable="false" space="false" decode="false">
       {{ $t('topBar.home') }}
     </RouterLink>
@@ -47,12 +47,19 @@ function changeLanguage() {
     transform 0.3s ease;
 }
 .open > *:hover {
-  color: grey;
+  color: rgb(228, 175, 232);
   transition:
     transform 0.3s ease,
     color 0.3s ease,
     border-bottom 0.3s ease; /* 添加下划线的过渡效果 */
-  border-bottom: 2px solid grey;
+  border-bottom: 4px solid rgb(114, 103, 114);
+}
+.open > * {
+  border-bottom: 0 solid transparent; /* 默认的下划线样式 */
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    border-bottom 0.3s ease; /* 添加下划线的过渡效果 */
 }
 .dark .open {
   color: aliceblue;
