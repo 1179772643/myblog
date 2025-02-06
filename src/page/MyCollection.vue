@@ -48,7 +48,7 @@ function saveState() {
 
 <style scoped>
   .dark .container {
-  color: aliceblue;
+  color: rgb(150, 169, 185);
   background: #191919;
 }
 

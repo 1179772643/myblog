@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import CodePullOutbar from '@/components/CodePullOutbar.vue'
+import MyCode from './MyCode.vue'
+import MyLittleToy from './MyLittleToy.vue'
 </script>
 
 <template>
   <CodePullOutbar />
-  <div class=" absolute flex justify-center items-center h-screen w-screen z-0 code">
-    <RouterView />
+  <div class="code">
+    <section id="panel1">
+      <MyCode />
+    </section>
+    <section id="panel2">
+      <MyLittleToy />
+    </section>
   </div>
 </template>
 

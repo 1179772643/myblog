@@ -63,6 +63,7 @@ function changeLanguage() {
 }
 .dark .open {
   color: aliceblue;
-  background: #191919;
+  background: #323232;
+  opacity: 0.8;
 }
 </style>
