@@ -1,8 +1,24 @@
 <script lang="ts" setup>
+import ButtonFirst from '@/components/buttonFirst.vue'
+import buttonSecend from '@/components/buttonSecend.vue'
 </script>
 
 <template>
-  <div class="start"></div>
+  <div class="start flex w-full h-full justify-center items-center">
+    <div class="flex z-10 font mt-[-70px] h-[200px] items-center">
+      Life is what happens
+
+      <div class="text-[50px] relative">
+        welcome my blog
+      </div>
+    </div>
+    <div class="justify-center items-center flex z-10 absolute mt-[260px] mr-[300px]">
+      <buttonSecend />
+    </div>
+    <div class=" justify-center items-center flex z-10 absolute mt-[260px] ml-[300px]">
+      <ButtonFirst />
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -17,5 +33,10 @@
 
 .dark .start {
   background-image: url('@/assets/background/night.png');
+}
+.font {
+  font-size: 80px;
+  font-family: 'Sketcomic';
+  color: beige;
 }
 </style>
