@@ -1,8 +1,11 @@
 <script lang="ts" setup>
+function scrollToPanel1() {
+  window.location.hash = '#panel1'
+}
 </script>
 
 <template>
-  <button>
+  <button @click="scrollToPanel1">
     Start!
   </button>
 </template>

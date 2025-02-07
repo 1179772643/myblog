@@ -5,17 +5,16 @@ import buttonSecend from '@/components/buttonSecend.vue'
 
 <template>
   <div class="start flex w-full h-full justify-center items-center">
-    <div class="flex z-10 font mt-[-70px] h-[200px] items-center">
+    <div class=" z-10 font mt-[-70px] h-[300px] items-self-center justify-self-center flex-col flex">
       Life is what happens
-
-      <div class="text-[50px] relative">
+      <text class="text-[50px] justify-center flex items-center">
         welcome my blog
-      </div>
+      </text>
     </div>
-    <div class="justify-center items-center flex z-10 absolute mt-[260px] mr-[300px]">
+    <div class="justify-center items-center flex z-10 absolute mt-[300px] mr-[300px]">
       <buttonSecend />
     </div>
-    <div class=" justify-center items-center flex z-10 absolute mt-[260px] ml-[300px]">
+    <div class=" justify-center items-center flex z-10 absolute mt-[300px] ml-[300px]">
       <ButtonFirst />
     </div>
   </div>
@@ -38,5 +37,8 @@ import buttonSecend from '@/components/buttonSecend.vue'
   font-size: 80px;
   font-family: 'Sketcomic';
   color: beige;
+}
+.dark .font {
+  color: #d2aad6;
 }
 </style>

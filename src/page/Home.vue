@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HomePullOutbar from '@/components/HomePullOutbar.vue'
 import personnal from '@/page/Personal.vue'
-import Start from '@/page/start.vue'
+import Start from '@/page/Start.vue'
 import MyAchievement from './MyAchievement.vue'
 import MyCollection from './MyCollection.vue'
 </script>
@@ -9,7 +9,9 @@ import MyCollection from './MyCollection.vue'
 <template>
   <HomePullOutbar />
   <div class="home">
-    <Start class="z-0" />
+    <section id="panel0">
+      <Start class="z-0" />
+    </section>
     <section id="panel1">
       <personnal />
     </section>
