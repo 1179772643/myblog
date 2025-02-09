@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <button class="">
+  <a href="https://gitee.com/xh_13_0/myblog" target="_blank">
     <div class="svg-wrapper-1">
       <div class="svg-wrapper">
         <svg
@@ -18,12 +18,12 @@
         </svg>
       </div>
     </div>
-    <span>Github</span>
-  </button>
+    <span>Gitee</span>
+  </a>
 </template>
 
 <style scoped lang="scss">
-button {
+a {
   opacity: 0.9;
   font-family: inherit;
   font-size: 20px;
@@ -40,38 +40,38 @@ button {
   font-weight: 1000;
 }
 
-button span {
+a span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
 }
 
-button svg {
+a svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
 }
 
-button:hover {
+a:hover {
   background: #000;
 }
 
-button:hover .svg-wrapper {
+a:hover .svg-wrapper {
   transform: scale(1.25);
   transition: 0.5s linear;
 }
 
-button:hover svg {
+a:hover svg {
   transform: translateX(1.2em) scale(1.1);
   fill: #fff;
 }
 
-button:hover span {
+a:hover span {
   opacity: 0;
   transition: 0.5s linear;
 }
 
-button:active {
+a:active {
   transform: scale(0.95);
 }
 </style>
