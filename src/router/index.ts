@@ -1,5 +1,3 @@
-import Code from '@/page/Code.vue'
-
 import { createRouter, createWebHistory } from 'vue-router'
 // 引入路由参数
 import Home from '@/page/Home.vue'
