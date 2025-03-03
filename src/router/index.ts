@@ -1,10 +1,10 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 // 引入路由参数
 import Home from '@/page/Home.vue'
 
 // 创建路由器
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
